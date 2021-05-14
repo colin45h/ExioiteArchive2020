@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="ColinContactManagerUniversal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ColinContactManagerUniversal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Loaded="Page_Load"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="400" Width="1030">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="24,25,0,0" Text="First Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,65,0,0" Text="Last Name:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,105,0,0" Text="Email:&#x9;" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,145,0,0" Text="Phone Number:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,185,0,0" Text="Home Address:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,225,0,0" Text="City:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,265,0,0" Text="State:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBlock HorizontalAlignment="Left" Margin="24,305,0,0" Text="ZIP Code:" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" />
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Margin="155,15,0,0" Text="{Binding Path=FirstName, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" FontFamily="Verdana"  AcceptsReturn="True" />
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Margin="155,55,0,0" Text="{Binding Path=LastName, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" FontFamily="Verdana"  AcceptsReturn="True"  />
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="155,95,0,0" Text="{Binding Path=Email, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" FontFamily="Verdana" AcceptsReturn="True"  />
+        <TextBox x:Name="PhoneNumberBox" HorizontalAlignment="Left" Margin="155,135,0,0" Text="{Binding Path=PhoneNumber, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top"  Width="200" FontFamily="Verdana" AcceptsReturn="True"  />
+        <TextBox x:Name="AddressBox" HorizontalAlignment="Left" Margin="155,175,0,0" Text="{Binding Path=Address, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top" Width="200" FontFamily="Verdana"  AcceptsReturn="True" />
+        <TextBox x:Name="CityBox" HorizontalAlignment="Left" Margin="155,215,0,0" Text="{Binding Path=City, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top"  Width="200" FontFamily="Verdana" AcceptsReturn="True" />
+        <TextBox x:Name="StateBox" HorizontalAlignment="Left" Margin="155,255,0,0" Text="{Binding Path=State, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top"  Width="200" FontFamily="Verdana"  AcceptsReturn="True" />
+        <TextBox x:Name="ZipBox" HorizontalAlignment="Left" Margin="155,295,0,0" Text="{Binding Zip, Mode=TwoWay}" TextWrapping="NoWrap" VerticalAlignment="Top"  Width="200" FontFamily="Verdana"  AcceptsReturn="True"/>
+        <controls:DataGrid x:Name="dataGrid" AutoGenerateColumns="True" GridLinesVisibility="All" AlternatingRowBackground="LightGray" HeadersVisibility="Column" ItemsSource="{x:Bind Path=contactList}" Margin="376,10,10,63" />
+        <Button x:Name="CreateContact" Content="Create Contact" Margin="24,352,0,0" VerticalAlignment="Top" Height="38" Width="160" FontFamily="Verdana" FontSize="15" Click="CreateContact_Click" />
+        <Button x:Name="OpenContact" Content="Open Contact List" Margin="376,352,0,0" VerticalAlignment="Top" Height="38" Width="160" FontFamily="Verdana" FontSize="15" Click="OpenContact_Click" />
+        <Button x:Name="SaveContact" Content="Save Contact List" Margin="860,352,0,0" VerticalAlignment="Top" Height="38" Width="160" FontFamily="Verdana" FontSize="15" Click="SaveContact_Click" />
+    </Grid>
+</Page>

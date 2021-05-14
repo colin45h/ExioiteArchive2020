@@ -1,0 +1,35 @@
+@hostname = http://localhost:7071
+
+// Contacts
+
+###
+GET {{hostname}}/api/Contacts/GetContacts HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+POST {{hostname}}/api/Contacts/AddContact HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+PUT {{hostname}}/api/Contacts/ReplaceContacts HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+// Users
+
+###
+POST {{hostname}}/api/Users/AddUser HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET {{hostname}}/api/Users/GetUser HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+###
+GET {{hostname}}/api/Users/UserCheck HTTP/1.1
+Content-Type: application/json
+Accept: application/json

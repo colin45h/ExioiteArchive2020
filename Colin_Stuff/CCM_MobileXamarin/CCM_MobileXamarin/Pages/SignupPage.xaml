@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCM_MobileXamarin.SignupPage">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source ="" BackgroundColor="Aquamarine"
+               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Colin Contact Manager" FontSize="28" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        
+
+        <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
+                Placeholder="Enter Username" Margin="10,10"
+                Text="{Binding Username}"/>
+
+        <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
+                Placeholder="Enter First Name" Margin="10,10"
+                Text="{Binding FirstName}"/>
+
+        <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
+                Placeholder="Enter Last Name" Margin="10,10"
+                Text="{Binding LastName}"/>
+
+        <Entry Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4"
+                Placeholder="Enter Password" Margin="10,10"
+                Text="{Binding Password}"/>
+
+        <Button Grid.Row="5" Grid.Column="1" Text="Sign Up" Clicked="Signup_Clicked" Margin="5,10" FontSize="18"/>
+        <Button Grid.Row="5" Grid.Column="0" Text="Cancel" Clicked="Cancel_Clicked" Margin="5,10" FontSize="18"/>
+
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,25 @@
+ @hostname = http://localhost:7071
+
+###
+GET {{hostname}}/api/GetContacts HTTP/1.1
+Content-Type:  application/json
+Accept: application/json
+
+
+
+###
+POST {{hostname}}/api/AddContact HTTP/1.1
+Content-Type:  application/json
+Accept: application/json
+
+{
+    "FirstName":"John",
+    "LastName":"Doe",
+    "Phone":"5552221234",
+    "Email":"Sample@gmail.com",
+    "Street":"123 Main St.",
+    "City":"Huntley",
+    "State":"IL",
+    "Zip":"60142",
+    "Description":""
+}

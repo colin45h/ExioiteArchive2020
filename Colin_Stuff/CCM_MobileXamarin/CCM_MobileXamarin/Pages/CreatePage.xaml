@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CCM_MobileXamarin.Pages.CreatePage"
+             Title="Create Contact">
+
+    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+        <Entry Text="{Binding FirstName}" Placeholder="First Name" />
+        <Entry Text="{Binding LastName}" Placeholder="Last Name" />
+        <Entry Text="{Binding Email}" Placeholder="Email" />
+        <Entry Text="{Binding PhoneNumber}" Placeholder="Phone Number" />
+        <Entry Text="{Binding Address}" Placeholder="Address" />
+        <Entry Text="{Binding City}" Placeholder="City" />
+        <Entry Text="{Binding State}" Placeholder="State" />
+        <Entry Text="{Binding Zip}" Placeholder="Zip" />
+        <Button Text="Create" Clicked="CreateContact" />
+        <Button Text="Cancel" Clicked="CancelContact" />
+    </StackLayout>
+</ContentPage>
